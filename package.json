@@ -1,0 +1,19 @@
+{
+  "name": "@tyk-technologies/graphiql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TykTechnologies/graphiql.git"
+  },
+  "author": "Tyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TykTechnologies/graphiql/issues"
+  },
+  "homepage": "https://github.com/TykTechnologies/graphiql#readme"
+}
