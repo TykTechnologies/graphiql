@@ -7,7 +7,7 @@ module.exports = (env) => {
       app: './src/index.js',
     },
     output: {
-      filename: '[name].[contenthash].js',
+      filename: 'index.js',
       path: path.resolve(__dirname, 'lib'),
     },
     module: {
