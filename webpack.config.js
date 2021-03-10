@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
   let webpackConfig = {
@@ -50,12 +49,10 @@ module.exports = (env) => {
         },
       ],
     },
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: './src/index.html',
-        filename: './index.html',
-      }),
-    ],
+    externals: {
+      react: 'commonjs2 react',
+      'react-dom': 'commonjs2 react-dom',
+    },
   };
   if (!env) {
     webpackConfig = {
