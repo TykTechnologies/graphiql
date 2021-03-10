@@ -5,7 +5,7 @@
   "files": [
     "lib"
   ],
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "rm -rf lib && webpack --progress --production",
     "start": "webpack-dev-server"
