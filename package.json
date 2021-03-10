@@ -33,7 +33,6 @@
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
     "file-loader": "^6.0.0",
-    "html-webpack-plugin": "^4.3.0",
     "image-webpack-loader": "^6.0.0",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.2",
