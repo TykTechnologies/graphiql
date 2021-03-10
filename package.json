@@ -43,10 +43,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "homepage": "https://github.com/TykTechnologies/graphiql#readme",
-  "peerDependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  },
   "dependencies": {
     "graphiql": "^1.4.0",
     "graphiql-explorer": "^0.6.2",

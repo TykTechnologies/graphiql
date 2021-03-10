@@ -9,6 +9,7 @@ module.exports = (env) => {
     output: {
       filename: 'index.js',
       path: path.resolve(__dirname, 'lib'),
+      libraryTarget: 'commonjs2',
     },
     module: {
       rules: [
@@ -54,11 +55,6 @@ module.exports = (env) => {
         filename: './index.html',
       }),
     ],
-    optimization: {
-      splitChunks: {
-        chunks: 'all',
-      },
-    },
   };
   if (!env) {
     webpackConfig = {
@@ -66,7 +62,7 @@ module.exports = (env) => {
       mode: 'development',
       devtool: 'inline-source-map',
       devServer: {
-        contentBase: './dist',
+        contentBase: './lib',
         open: true,
         overlay: true,
         stats: 'errors-only',
