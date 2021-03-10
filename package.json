@@ -2,9 +2,11 @@
   "name": "@tyk-technologies/graphiql",
   "version": "1.0.0",
   "description": "",
+  "files": ["lib"],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf lib && webpack --progress --production",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,39 @@
   "bugs": {
     "url": "https://github.com/TykTechnologies/graphiql/issues"
   },
-  "homepage": "https://github.com/TykTechnologies/graphiql#readme"
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.1.0",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "image-webpack-loader": "^6.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "homepage": "https://github.com/TykTechnologies/graphiql#readme",
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "dependencies": {
+    "graphiql": "^1.4.0",
+    "graphiql-explorer": "^0.6.2",
+    "graphql": "^15.5.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
 }
