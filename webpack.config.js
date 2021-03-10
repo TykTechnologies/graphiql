@@ -9,6 +9,7 @@ module.exports = (env) => {
     output: {
       filename: 'index.js',
       path: path.resolve(__dirname, 'lib'),
+      library: 'graphiql',
       libraryTarget: 'commonjs2',
     },
     module: {
