@@ -48,7 +48,7 @@ const TykGraphiQL = (props) => {
       <GraphiQLExplorer
         explorerIsOpen={explorerIsOpen}
         onToggleExplorer={toggleExplorer}
-        onEdit={(q) => setQuery(q)}
+        onEdit={setQuery}
         schema={schema && buildSchema(schema)}
         query={query}
         onRunOperation={(operationName) =>
