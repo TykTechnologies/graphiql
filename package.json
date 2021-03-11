@@ -7,7 +7,7 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "build": "rm -rf lib && webpack --progress --production",
+    "build": "webpack --progress --production",
     "start": "webpack-dev-server"
   },
   "repository": {
