@@ -3,6 +3,7 @@ import GraphiQL from 'graphiql';
 import PropTypes from 'prop-types';
 import { buildSchema } from 'graphql';
 import GraphiQLExplorer from 'graphiql-explorer';
+import 'graphiql/graphiql.min.css';
 import './common/styles/index.scss';
 
 const TykGraphiQL = (props) => {
