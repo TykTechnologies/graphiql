@@ -1,15 +1,19 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = (env) => {
+  const isPlayground = env === 'playground' || (env && env.playground);
   let webpackConfig = {
     entry: {
-      app: './src/index.js',
+      [isPlayground ? 'playground' : 'app']:
+        isPlayground ? './src/playground.js' : './src/index.js',
     },
     output: {
-      filename: 'index.js',
+      filename: isPlayground ? 'playground.js' : 'index.js',
       path: path.resolve(__dirname, 'lib'),
-      library: 'graphiql',
-      libraryTarget: 'commonjs2',
+      library: isPlayground ? 'GraphiqlInit' : 'graphiql',
+      libraryTarget: isPlayground ? 'window' : 'commonjs2',
+      libraryExport: isPlayground ? 'default' : undefined,
     },
     module: {
       rules: [
@@ -57,10 +61,15 @@ module.exports = (env) => {
         },
       ],
     },
-    externals: {
-      react: 'commonjs2 react',
-      'react-dom': 'commonjs2 react-dom',
-    },
+    externals: isPlayground
+      ? {}
+      : {
+          react: 'commonjs2 react',
+          'react-dom': 'commonjs2 react-dom',
+        },
+    plugins: isPlayground
+      ? [new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 })]
+      : [],
   };
   if (!env) {
     webpackConfig = {
