@@ -11,7 +11,7 @@ const TykGraphiQL = (props) => {
     fetcher,
     schema,
     ideName = 'TykGraphiQL',
-    query: initialQuery = '{}',
+    query: initialQuery = 'query { __typename }',
     showPlayground = true,
     menu,
   } = props;
